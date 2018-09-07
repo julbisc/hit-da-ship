@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="ship.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="wrapper">
+                <div class="flex" v-bind:class="'row'+h" v-for="h in height">
+                    <div class="flex-item" v-for="w in width" v-on:click="click(h+'-'+w)" v-bind:class="h+'-'+w" v-bind:class="[ last_selection == h+'-'+w ? selection : ''">{{ h }}-{{ w }}</div>
+                </div>
+            </div>
+        </div>
+        <script src="ship.js"></script>
+    </body>
+</html>
