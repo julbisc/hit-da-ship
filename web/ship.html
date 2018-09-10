@@ -5,10 +5,8 @@
     </head>
     <body>
         <div id="app">
-            <div class="wrapper">
-                <div class="flex" v-bind:class="'row'+h" v-for="h in height">
-                    <div class="flex-item" v-for="w in width" v-on:click="click(h+'-'+w)" v-bind:class="h+'-'+w" v-bind:class="[ last_selection == h+'-'+w ? selection : ''">{{ h }}-{{ w }}</div>
-                </div>
+            <div class="wrapper flex">
+                <div class="flex-item" :data-x="field.pos.x" :data-y="field.pos.y" v-for="field in fields" v-bind:style="fieldLayout">{{ field.pos.x }} - {{ field.pos.y }}</div>
             </div>
         </div>
         <script src="ship.js"></script>

@@ -9,6 +9,7 @@ body {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     background-color: whitesmoke;
     align-items: center;
@@ -20,9 +21,8 @@ body {
 .flex-item {
     box-sizing: border-box;
     display: flex;
-    flex-grow: 1;
     text-align: center;
-    padding: 20px;
+    padding: 20px 5px;
     border: solid 1px;
     align-items: center;
     justify-content: center;

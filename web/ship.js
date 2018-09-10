@@ -1,15 +1,37 @@
+const height = 9;
+const width = 9;
+
 class Position {
     constructor(x, y) {
         this.x = x;
         this.y = y;
+    }    
+}
+
+class Field {
+    constructor(x, y) {
+        this.pos = new Position(x, y);
+        this.status = '';
+        this.classes = [];
+    };
+    getPos() {
+        return this.pos;
     }
+    getStatus() {
+        return this.status;
+    }
+    getClasses() {
+        return this.classes;
+    }
+    
+
 }
 
 var vue = new Vue({
     el: '#app',
     data: {
-        height: 9,
-        width: 9,
+        height: height,
+        width: width,
         last_pick: '',
         ships: [],
     },
@@ -29,4 +51,21 @@ var vue = new Vue({
             });
         }
     },
+    computed: {
+        fields: function() {
+            var fields = [];
+            for (i = 0; i < this.height; i++) {
+                for (i2 = 0; i2 < this.width; i2++) {
+                    fields.push(new Field(i2, i))
+                }
+            }
+            return fields;
+        },
+        fieldLayout: function() {
+            return {
+                flex: "0 0 " + 100 / this.width + "%",
+            }
+        },
+
+    }
 })
