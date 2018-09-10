@@ -5,10 +5,13 @@
     </head>
     <body>
         <div id="app">
+        <div class="label">'Hit da ship®' game of the year edition</div>
             <div class="wrapper flex">
-                <div class="flex-item" :data-x="field.pos.x" :data-y="field.pos.y" v-for="field in fields" v-bind:style="fieldLayout">{{ field.pos.x }} - {{ field.pos.y }}</div>
+                <div class="flex-item" :data-x="field.pos.x" :data-y="field.pos.y" v-for="field in fields" v-bind:style="fieldLayout"></div>
             </div>
+            <form class="ship_box"></form>
         </div>
+        <div class="background-image"></div>
         <script src="ship.js"></script>
     </body>
 </html>

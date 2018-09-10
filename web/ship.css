@@ -1,37 +1,47 @@
-body {
-    background: linear-gradient(to bottom, lightblue, darkblue);
+.background-image {
+    background-image: url('https://i.imgur.com/eN5Gn3l.jpg');
+    position: fixed;
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.label {
+    font-size: 50px;
+    text-align: center;
 }
 
 .wrapper {
     width: 50%;
-    margin: 0 auto;
+    margin: 5vh auto;
 }
 
 .flex {
+    opacity: 0.5;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    background-color: whitesmoke;
+    background-color: rgb(25, 173, 223);
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 .flex-item {
     box-sizing: border-box;
     display: flex;
     text-align: center;
-    padding: 20px 5px;
+    padding: 40px;
     border: solid 1px;
     align-items: center;
     justify-content: center;
 }
 
 .flex-item:hover {
-    outline: 3px solid forestgreen;
+    outline: 3px solid rgb(229, 255, 0);
     position: relative;
-    border-color: forestgreen;
+    border-color: rgb(229, 255, 0);
 }
 
 .boat {
@@ -44,4 +54,35 @@ body {
 
 .selection {
     background-color: lime;
+}
+
+.ship_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin: 20% 41%;
+}
+
+.field_login {
+    display: flex;
+    font-size: 20px;
+    margin-top: 10px;
+    padding-left: 5px;
+    width: 300px;
+    height: 50px;
+    opacity: 0.5;
+}
+
+.field_login:focus {
+    opacity: 1;
+}
+
+.button_login {
+    width: 75px;
+    height: 40px;
 }
